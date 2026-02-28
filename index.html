@@ -3,20 +3,638 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEFO's Music Website</title>
+    <title>VEFO | Music for Action</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Clean, modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to VEFO's Music Website</h1>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="brand" href="#">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>VEFO</span>
+            </a>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a data-nav href="#music">Music</a>
+                <a data-nav href="#about">About</a>
+                <a data-nav href="#work">Work</a>
+                <a data-nav href="#services">Services</a>
+                <a data-nav href="#contact">Contact</a>
+            </nav>
+
+            <div class="actions">
+                <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a class="btn btn-ghost" href="#music"><i class="fas fa-headphones"></i><span>Listen</span></a>
+                <a class="btn btn-primary" href="#contact"><i class="fas fa-calendar-check"></i><span>Book</span></a>
+            </div>
+        </div>
+
+        <div class="mobile-panel" id="mobilePanel" role="dialog" aria-label="Mobile navigation">
+            <a data-nav href="#music">Music</a>
+            <a data-nav href="#about">About</a>
+            <a data-nav href="#work">Work</a>
+            <a data-nav href="#services">Services</a>
+            <a data-nav href="#contact">Contact</a>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h2>About VEFO</h2>
-            <p>Discover the music and artistic journey of VEFO.</p>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div>
+                    <div class="eyebrow">Musician • Activist • Performer</div>
+                    <h1>Music for a changing world.</h1>
+                    <p class="hero-lead">Creating conscious art at the intersection of animal rights, climate action, and mental health. Based in Bangalore, working worldwide.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#music"><i class="fas fa-play"></i><span>Featured music</span></a>
+                        <a class="btn btn-ghost" href="#contact"><i class="fas fa-paper-plane"></i><span>Start a booking</span></a>
+                    </div>
+                </div>
+
+                <aside class="hero-card" aria-label="Highlights">
+                    <div class="badge"><i class="fas fa-sparkles"></i><span>Now booking April 2026+</span></div>
+                    <div class="stat-grid">
+                        <div class="stat">
+                            <div class="k">Climate</div>
+                            <div class="v">Campaign-ready music</div>
+                        </div>
+                        <div class="stat">
+                            <div class="k">Animal rights</div>
+                            <div class="v">Action-forward messaging</div>
+                        </div>
+                        <div class="stat">
+                            <div class="k">Mental health</div>
+                            <div class="v">Workshops & community</div>
+                        </div>
+                        <div class="stat">
+                            <div class="k">Worldwide</div>
+                            <div class="v">Based in Bangalore</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="music" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Listen</div>
+                        <h2>Featured music</h2>
+                    </div>
+                    <a class="link" href="https://youtube.com/playlist?list=PLHZX9dZFcwdKEYbh78iopnrzJ4GeQFDn2&si=z0jfTXfHooJeJLF2" target="_blank" rel="noreferrer"><i class="fab fa-youtube"></i><span>Open playlist</span></a>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-media video-fallback" data-video-id="De3Uaf0R650">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/De3Uaf0R650/maxresdefault.jpg');">
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-globe"></i><span>2025–2026 • Official</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Planet Heroes</div>
+                            <p style="margin-top: 8px;">A high-energy, mission-led track built for action and community.</p>
+                            <div class="row">
+                                <a class="link" href="https://www.youtube.com/watch?v=De3Uaf0R650" target="_blank" rel="noreferrer"><i class="fab fa-youtube"></i><span>Watch on YouTube</span></a>
+                                <a class="link" href="#"><i class="fab fa-soundcloud"></i><span>SoundCloud</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-leaf"></i><span>2024 • Plant Based Treaty</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Green Smoothie</div>
+                            <p style="margin-top: 8px;">Campaign song + challenge energy for Earth Month and beyond.</p>
+                            <div class="row">
+                                <a class="link" href="#"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+                                <a class="link" href="#"><i class="fab fa-spotify"></i><span>Spotify</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-record-vinyl"></i><span>2024 • Instrumental</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">VIZARD</div>
+                            <p style="margin-top: 8px;">Instrumental world-building designed for focus and flow.</p>
+                            <div class="row">
+                                <a class="link" href="#"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+                                <a class="link" href="#"><i class="fab fa-spotify"></i><span>Spotify</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Story</div>
+                        <h2>From COP30 to the stage</h2>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="portrait" aria-label="VEFO portrait placeholder"></div>
+                    <div>
+                        <p style="font-size: 1.05rem;">I'm VEFO — an artist, activist, and creator who believes art can move people and make great positive change in the world.</p>
+                        <p style="margin-top: 12px;">My journey has taken me from performing in Canada to across South America to now India. Universities, Festivals, in government work to COP30 in Brazil, and now to Bangalore, where I create music that amplifies animal rights, climate action, and mental health awareness. I don't just perform — I build campaigns, lead workshops, and collaborate with organizations to turn values into action.</p>
+
+                        <div class="values">
+                            <div class="value"><i class="fas fa-paw"></i><span>Animal Rights</span></div>
+                            <div class="value"><i class="fas fa-leaf"></i><span>Sustainability & Plant-Based Living</span></div>
+                            <div class="value"><i class="fas fa-brain"></i><span>Mental Health Advocacy</span></div>
+                            <div class="value"><i class="fas fa-hand-holding-heart"></i><span>Human Rights</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Impact</div>
+                        <h2>Campaigns & performances</h2>
+                    </div>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-earth-americas"></i><span>Climate advocacy</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">COP30 Delegate</div>
+                            <p style="margin-top: 8px;">Bridging policy and art to advocate for plant-based solutions.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-seedling"></i><span>Animal rights • Music</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Green Smoothie Challenge</div>
+                            <p style="margin-top: 8px;">Campaign song + global challenge reaching thousands during Earth Month.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-graduation-cap"></i><span>Education • Youth</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Planet Heroes School Pilot</div>
+                            <p style="margin-top: 8px;">Interactive workshop mixing live performance, games, and plant-based tasting.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Services</div>
+                        <h2>Let’s work together</h2>
+                    </div>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-school"></i><span>Schools</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Planet Heroes workshops</div>
+                            <p style="margin-top: 8px;">90-minute sessions combining live music, experiential learning, and plant-based tasting.</p>
+                            <div class="row"><a class="link" href="#contact"><span>Inquire</span><i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-building"></i><span>Business</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Wellness + benefit concerts</div>
+                            <p style="margin-top: 8px;">Lunch & Learns, performances, and sessions on sustainability and mental health.</p>
+                            <div class="row"><a class="link" href="#contact"><span>Inquire</span><i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-hand-holding-heart"></i><span>NGOs</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Campaign songs + facilitation</div>
+                            <p style="margin-top: 8px;">Custom music, workshops, and collaborations for mission-led organizations.</p>
+                            <div class="row"><a class="link" href="#contact"><span>Inquire</span><i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Booking</div>
+                        <h2>Book VEFO</h2>
+                    </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 18px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-location-dot"></i><span>Bangalore • Worldwide</span></div>
+                            <p style="margin-top: 12px;">Ready to bring conscious music to your event or organization? Tell me about your vision.</p>
+                            <div class="row" style="margin-top: 14px;">
+                                <span class="badge"><i class="fas fa-envelope"></i><span>vefo@example.com</span></span>
+                                <span class="badge"><i class="fas fa-calendar"></i><span>Bookings from April 2026</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="form" action="#" method="POST">
+                                <div class="form-row">
+                                    <input class="input" type="text" placeholder="Your name" required>
+                                    <input class="input" type="email" placeholder="Email address" required>
+                                </div>
+                                <select class="select" required>
+                                    <option value="" disabled selected>Organization type</option>
+                                    <option>School / Educational Institution</option>
+                                    <option>Business / Corporation</option>
+                                    <option>NGO / Nonprofit</option>
+                                    <option>Individual / Private Event</option>
+                                </select>
+                                <input class="input" type="text" placeholder="Event type / occasion">
+                                <textarea class="textarea" placeholder="Tell me about your vision, audience, and goals..." required></textarea>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span>Send inquiry</span></button>
+                            </form>
+                            <div class="helper">I’ll respond within 2–3 days. No spam, ever.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 VEFO Music</p>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a class="brand" href="#">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span>VEFO</span>
+                </a>
+                <div class="social" aria-label="Social links">
+                    <a class="icon-btn" href="https://instagram.com/vefomusic" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="icon-btn" href="https://youtube.com/@vefomusic" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a class="icon-btn" href="https://linktr.ee/vefo" target="_blank" rel="noreferrer" aria-label="Linktree"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="helper" style="text-align:center; margin-top: 16px;">© 2026 VEFO. Music for action. All rights reserved.</div>
+        </div>
     </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEFO | Music for Action</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Clean, modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="brand" href="#">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>VEFO</span>
+            </a>
+
+            <nav class="nav" aria-label="Primary navigation">
+                <a data-nav href="#music">Music</a>
+                <a data-nav href="#about">About</a>
+                <a data-nav href="#work">Work</a>
+                <a data-nav href="#services">Services</a>
+                <a data-nav href="#contact">Contact</a>
+            </nav>
+
+            <div class="actions">
+                <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a class="btn btn-ghost" href="#music"><i class="fas fa-headphones"></i><span>Listen</span></a>
+                <a class="btn btn-primary" href="#contact"><i class="fas fa-calendar-check"></i><span>Book</span></a>
+            </div>
+        </div>
+
+        <div class="mobile-panel" id="mobilePanel" role="dialog" aria-label="Mobile navigation">
+            <a data-nav href="#music">Music</a>
+            <a data-nav href="#about">About</a>
+            <a data-nav href="#work">Work</a>
+            <a data-nav href="#services">Services</a>
+            <a data-nav href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div>
+                    <div class="eyebrow">Musician • Activist • Performer</div>
+                    <h1>Music for a changing world.</h1>
+                    <p class="hero-lead">Creating conscious art at the intersection of animal rights, climate action, and mental health. Based in Bangalore, working worldwide.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#music"><i class="fas fa-play"></i><span>Featured music</span></a>
+                        <a class="btn btn-ghost" href="#contact"><i class="fas fa-paper-plane"></i><span>Start a booking</span></a>
+                    </div>
+                </div>
+
+                <aside class="hero-card" aria-label="Highlights">
+                    <div class="badge"><i class="fas fa-sparkles"></i><span>Now booking April 2026+</span></div>
+                    <div class="stat-grid">
+                        <div class="stat">
+                            <div class="k">Climate</div>
+                            <div class="v">Campaign-ready music</div>
+                        </div>
+                        <div class="stat">
+                            <div class="k">Animal rights</div>
+                            <div class="v">Action-forward messaging</div>
+                        </div>
+                        <div class="stat">
+                            <div class="k">Mental health</div>
+                            <div class="v">Workshops & community</div>
+                        </div>
+                        <div class="stat">
+                            <div class="k">Worldwide</div>
+                            <div class="v">Based in Bangalore</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="music" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Listen</div>
+                        <h2>Featured music</h2>
+                    </div>
+                    <a class="link" href="https://youtube.com/playlist?list=PLHZX9dZFcwdKEYbh78iopnrzJ4GeQFDn2&si=z0jfTXfHooJeJLF2" target="_blank" rel="noreferrer"><i class="fab fa-youtube"></i><span>Open playlist</span></a>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-media video-fallback" data-video-id="De3Uaf0R650">
+                            <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/De3Uaf0R650/maxresdefault.jpg');">
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-globe"></i><span>2025–2026 • Official</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Planet Heroes</div>
+                            <p style="margin-top: 8px;">A high-energy, mission-led track built for action and community.</p>
+                            <div class="row">
+                                <a class="link" href="https://www.youtube.com/watch?v=De3Uaf0R650" target="_blank" rel="noreferrer"><i class="fab fa-youtube"></i><span>Watch on YouTube</span></a>
+                                <a class="link" href="#"><i class="fab fa-soundcloud"></i><span>SoundCloud</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-leaf"></i><span>2024 • Plant Based Treaty</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Green Smoothie</div>
+                            <p style="margin-top: 8px;">Campaign song + challenge energy for Earth Month and beyond.</p>
+                            <div class="row">
+                                <a class="link" href="#"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+                                <a class="link" href="#"><i class="fab fa-spotify"></i><span>Spotify</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-record-vinyl"></i><span>2024 • Instrumental</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">VIZARD</div>
+                            <p style="margin-top: 8px;">Instrumental world-building designed for focus and flow.</p>
+                            <div class="row">
+                                <a class="link" href="#"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+                                <a class="link" href="#"><i class="fab fa-spotify"></i><span>Spotify</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Story</div>
+                        <h2>From COP30 to the stage</h2>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="portrait" aria-label="VEFO portrait placeholder"></div>
+                    <div>
+                        <p style="font-size: 1.05rem;">I'm VEFO — an artist, activist, and creator who believes art can move people and make great positive change in the world.</p>
+                        <p style="margin-top: 12px;">My journey has taken me from performing in Canada to across South America to now India. Universities, Festivals, in government work to COP30 in Brazil, and now to Bangalore, where I create music that amplifies animal rights, climate action, and mental health awareness. I don't just perform — I build campaigns, lead workshops, and collaborate with organizations to turn values into action.</p>
+
+                        <div class="values">
+                            <div class="value"><i class="fas fa-paw"></i><span>Animal Rights</span></div>
+                            <div class="value"><i class="fas fa-leaf"></i><span>Sustainability & Plant-Based Living</span></div>
+                            <div class="value"><i class="fas fa-brain"></i><span>Mental Health Advocacy</span></div>
+                            <div class="value"><i class="fas fa-hand-holding-heart"></i><span>Human Rights</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Impact</div>
+                        <h2>Campaigns & performances</h2>
+                    </div>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-earth-americas"></i><span>Climate advocacy</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">COP30 Delegate</div>
+                            <p style="margin-top: 8px;">Bridging policy and art to advocate for plant-based solutions.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-seedling"></i><span>Animal rights • Music</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Green Smoothie Challenge</div>
+                            <p style="margin-top: 8px;">Campaign song + global challenge reaching thousands during Earth Month.</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media" style="display:flex; align-items:center; justify-content:center;">
+                            <div class="badge"><i class="fas fa-graduation-cap"></i><span>Education • Youth</span></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">Planet Heroes School Pilot</div>
+                            <p style="margin-top: 8px;">Interactive workshop mixing live performance, games, and plant-based tasting.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Services</div>
+                        <h2>Let’s work together</h2>
+                    </div>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-school"></i><span>Schools</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Planet Heroes workshops</div>
+                            <p style="margin-top: 8px;">90-minute sessions combining live music, experiential learning, and plant-based tasting.</p>
+                            <div class="row"><a class="link" href="#contact"><span>Inquire</span><i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-building"></i><span>Business</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Wellness + benefit concerts</div>
+                            <p style="margin-top: 8px;">Lunch & Learns, performances, and sessions on sustainability and mental health.</p>
+                            <div class="row"><a class="link" href="#contact"><span>Inquire</span><i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-hand-holding-heart"></i><span>NGOs</span></div>
+                            <div class="card-title" style="margin-top: 10px;">Campaign songs + facilitation</div>
+                            <p style="margin-top: 8px;">Custom music, workshops, and collaborations for mission-led organizations.</p>
+                            <div class="row"><a class="link" href="#contact"><span>Inquire</span><i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Booking</div>
+                        <h2>Book VEFO</h2>
+                    </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 18px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="badge"><i class="fas fa-location-dot"></i><span>Bangalore • Worldwide</span></div>
+                            <p style="margin-top: 12px;">Ready to bring conscious music to your event or organization? Tell me about your vision.</p>
+                            <div class="row" style="margin-top: 14px;">
+                                <span class="badge"><i class="fas fa-envelope"></i><span>vefo@example.com</span></span>
+                                <span class="badge"><i class="fas fa-calendar"></i><span>Bookings from April 2026</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="form" action="#" method="POST">
+                                <div class="form-row">
+                                    <input class="input" type="text" placeholder="Your name" required>
+                                    <input class="input" type="email" placeholder="Email address" required>
+                                </div>
+                                <select class="select" required>
+                                    <option value="" disabled selected>Organization type</option>
+                                    <option>School / Educational Institution</option>
+                                    <option>Business / Corporation</option>
+                                    <option>NGO / Nonprofit</option>
+                                    <option>Individual / Private Event</option>
+                                </select>
+                                <input class="input" type="text" placeholder="Event type / occasion">
+                                <textarea class="textarea" placeholder="Tell me about your vision, audience, and goals..." required></textarea>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span>Send inquiry</span></button>
+                            </form>
+                            <div class="helper">I’ll respond within 2–3 days. No spam, ever.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a class="brand" href="#">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span>VEFO</span>
+                </a>
+                <div class="social" aria-label="Social links">
+                    <a class="icon-btn" href="https://instagram.com/vefomusic" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="icon-btn" href="https://youtube.com/@vefomusic" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a class="icon-btn" href="https://linktr.ee/vefo" target="_blank" rel="noreferrer" aria-label="Linktree"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="helper" style="text-align:center; margin-top: 16px;">© 2026 VEFO. Music for action. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
 </body>
 </html>
